@@ -1,0 +1,16 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		bubble b = new bubble();
+		insertion i = new insertion();
+		int[] a;
+		a = b.choose();
+		b.bubbleSort(a);
+		a = b.choose();
+		i.insertionSort(a);
+	
+	}
+
+}
