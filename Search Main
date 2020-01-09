@@ -1,0 +1,29 @@
+
+public class searchMain {
+
+	public static void main(String[] args) {
+		
+		sequentialSearch s = new sequentialSearch();
+		binarySearch n = new binarySearch();
+		bubble b = new bubble();
+		int[] a;
+		
+		//sequential
+		a = s.choose();
+		s.Print(a);
+		int search = s.lookFor();
+		int find = s.SequentialSort(a, search);
+		s.Print(search, find);
+		
+		//binary
+		a = s.choose();
+		b.bubbleSort(a);
+		search = n.lookFor();
+		find = n.search(a, search);
+		n.Print(search, find);
+				
+		
+
+	}
+
+}
