@@ -19,8 +19,8 @@ public class insertion {
 				a[j + 1] = itemToInsert;
 		}
 		System.out.println("Insertion Sort:");
-		for (int x = 0; x < a.length - 1; x++) {
-			if (x == a.length - 2) {
+		for (int x = 0; x < a.length; x++) {
+			if (x == a.length - 1) {
 				System.out.println(a[x]);
 			}
 			else
@@ -28,4 +28,3 @@ public class insertion {
 		}
 	}
 }
-
