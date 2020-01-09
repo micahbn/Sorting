@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class binarySearch {
+	int search(int[] num, int lookingfor) {
+	     int left = 0;
+	     int right = num.length - 1;
+	     int midpoint;
+	     while (left <= right) {
+	          midpoint = (left + right) / 2;
+	          if (num[midpoint] == lookingfor)
+	               return midpoint;
+	          else if (num[midpoint] < lookingfor)
+	               left = midpoint + 1;
+	          else
+	               right = midpoint - 1;
+	     }
+	     return -1; // indication that the search has failed
+	}
+
+	//user inputs integer to search for
+	public int lookFor() {
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Enter an integer to search for. Must be between 0-10.");
+		int search = reader.nextInt();
+		reader.close();
+		return search;
+	}
+	//print where value is found
+	public void Print(int search, int midpoint) {
+		if (midpoint != -1)
+			System.out.println("The integer " + search + " is at the index " + midpoint);
+		else
+			System.out.println("The integer " + search + " is not in the array");
+	}
+}
