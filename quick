@@ -1,5 +1,6 @@
 
 public class quick {
+	public int iterations = 0;
 	void quickSort (int[] a, int left, int right) {
 		if (left >= right) return;
 		int i = left;
@@ -20,9 +21,12 @@ public class quick {
 				j--;
 			}
 		}
+		iterations++;
 		quickSort (a, left, j);
 		quickSort (a, i, right);
-		/*
+	}
+	
+	public void print(int[] a) {
 		System.out.println("Quick Sort:");
 		for (int x = 0; x < a.length; x++) {
 			if (x == a.length - 1) {
@@ -31,9 +35,8 @@ public class quick {
 			}
 			else
 				System.out.print(a[x] + ", ");
-		}
-		*/
-		
 	}
+		System.out.println("Iterations: " + iterations);
 
+}
 }
