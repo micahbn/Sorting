@@ -26,10 +26,10 @@ public class bubble {
 		for (b = 0; b < opt ; b++) {
 			a[b] = rand.nextInt(opt);
 		}
-		reader.close();
 		return a;
 	}
 	void bubbleSort(int[] a) {
+		
 		int k = 0;
 		boolean exchangeMade= true;
 		while ((k < a.length - 1) && exchangeMade) {
@@ -52,7 +52,7 @@ public class bubble {
 			else
 			System.out.print(a[q] + ", ");
 		}
-		System.out.println(swaps + " swaps made");
+		System.out.println("Iterations: " + swaps);
 	}
 	
 	public void printOrig(int [] a) {
