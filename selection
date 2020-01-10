@@ -1,10 +1,13 @@
 
 public class selection {
+	public int iterations = 0;
+	
 	void selectionSort(int[] a) {
 		for (int i = 0; i < a.length - 1; i++) {
 			int minIndex = findMinimum(a, i);
 			if (minIndex != i)
 				swap(a, i, minIndex);
+			iterations++;
 		}
 		System.out.println("Selection Sort:");
 		for (int x = 0; x < a.length; x++) {
@@ -13,6 +16,7 @@ public class selection {
 			else
 				System.out.print(a[x] + ", ");
 		}
+		System.out.println("Iterations: " + iterations);
 	}
 	
 	int findMinimum(int[] a, int first) {
